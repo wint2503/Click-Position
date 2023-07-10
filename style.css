@@ -16,8 +16,8 @@ body{
 
 .map-container{
     /* background-color: pink; */
-    width: 1000px;
-    height: 500px;
+    width: 900px;
+    height: 400px;
     background-image: url('./maps.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,6 +25,8 @@ body{
     /* border: 1px solid #999; */
 
     position: relative;
+
+    overflow: hidden;
 }
 
 .map-container .circle{
