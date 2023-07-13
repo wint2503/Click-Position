@@ -12,7 +12,7 @@ getmap.addEventListener('click',function(e){
     const cy = e.clientY;
     // console.log(cx,cy);
 
-    const mapleft = e.target.offsetLeft;
+    const mapleft = e.target.offsetLeft; //မြေပုံရဲ့ လက်ရှိ ရှိနေတဲ့နေရာ
     const maptop = e.target.offsetTop;
     // console.log(mapleft,maptop);
 
