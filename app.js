@@ -26,10 +26,16 @@ getmap.addEventListener('click',function(e){
         circle.classList.add('circle');
         // console.log(circle);
 
+        // insert location with current in style
         circle.style.left = `${curx}px`;
         circle.style.top = `${cury}px`;
 
-        e.target.appendChild(circle);
+        circle.style.setProperty('--small-color','darkblue');
+        circle.style.setProperty('--medium-color','steelblue');
+        circle.style.setProperty('--large-color','skyblue')
+
+        // e.target.appendChild(circle);
+        this.appendChild(circle);
     }
     removepointer(e);
 })
