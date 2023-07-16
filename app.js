@@ -8,6 +8,7 @@ var circleidx = 0;
 getmap.addEventListener('click',function(e){
     circleidx++;
     // console.log(e.target)
+
     if(e.target.classList.contains('map-container')){
         const cx = e.clientX; //window ကနေကွာတဲ့ အကွာအဝေးကိုယူတာ
         const cy = e.clientY;
@@ -30,9 +31,11 @@ getmap.addEventListener('click',function(e){
         circle.style.left = `${curx}px`;
         circle.style.top = `${cury}px`;
 
-        circle.style.setProperty('--small-color','darkblue');
-        circle.style.setProperty('--medium-color','steelblue');
-        circle.style.setProperty('--large-color','skyblue')
+        if(getsmallcolor.selectedIndex > 0 && getmediumcolor.selectedIndex > 0 && getlargecolor.selectedIndex > 0){
+            circle.style.setProperty('--small-color', getsmallcolor.value);
+            circle.style.setProperty('--medium-color', getmediumcolor.value);
+            circle.style.setProperty('--large-color', getlargecolor.value)
+        }
 
         // e.target.appendChild(circle);
         this.appendChild(circle);
